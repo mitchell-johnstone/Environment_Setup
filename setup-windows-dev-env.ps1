@@ -79,6 +79,9 @@ switch ($result) {
     Write-Output "Installing Notepad++"
     choco.exe upgrade notepadplusplus -y
 
+    Write-Output "Installing vim"
+    choco.exe upgrade vim -y
+
     Write-Output "Installing haskell-stack"
     choco.exe upgrade haskell-stack -y
 
@@ -90,6 +93,12 @@ switch ($result) {
 
     Write-Output "Installing python3"
     choco.exe upgrade python3 -y
+
+    Write-Output "Installing mingw"
+    choco.exe upgrade mingw -y
+
+    Write-Output "Installing openjdk"
+    choco.exe upgrade openjdk -y
 
     Write-Output "Installing googlechrome"
     choco.exe upgrade googlechrome -y
