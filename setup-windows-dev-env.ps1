@@ -1,56 +1,19 @@
-<#PSScriptInfo
- 
-.VERSION 1.0
- 
-.GUID 4d6860ae-67e0-46ed-9a8d-0e9a3e4f4631
- 
-.AUTHOR duluca
- 
-.COMPANYNAME
- 
-.COPYRIGHT
- 
-.TAGS
- 
-.LICENSEURI
- 
-.PROJECTURI
- 
-.ICONURI
- 
-.EXTERNALMODULEDEPENDENCIES
- 
-.REQUIREDSCRIPTS
- 
-.EXTERNALSCRIPTDEPENDENCIES
- 
-.RELEASENOTES
- 
- 
-#>
-
 <#
- 
 .DESCRIPTION
- Setup a web development environment with Git, Node, VS Code and AWS
+ Setup a development environment
 #>
 Param()
 
 # This script is intentionally kept simple to demonstrate basic automation techniques.
 
 Write-Output "You must run this script in an elevated command shell, using 'Run as Administator'"
-
 $title = "Setup Web Development Environment"
 $message = "Select the appropriate option to continue (Absolutely NO WARRANTIES or GUARANTEES are provided):"
-
 $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Install Software using Chocolatey", `
   "Setup development environment."
-
 $no = New-Object System.Management.Automation.Host.ChoiceDescription "&Exit", `
   "Do not execute script."
-
 $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
-
 $result = $host.ui.PromptForChoice($title, $message, $options, 1)
 
 switch ($result) {
